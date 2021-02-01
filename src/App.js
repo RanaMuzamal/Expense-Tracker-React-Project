@@ -1,18 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+
+
+//import components
 import Header from './Components/Header'
 import Balance from './Components/Balance'
 import AccountSummary from './Components/AccountSummary'
+import TransactionHistory from './Components/TransactionHistory'
+import AddTransaction from './Components/AddTransaction'
 
 function App() {
   return (
-    <div >
+    <div className="body">
       <Header/>
-      <div>
+      <div className="balanceDetails">
         <Balance/>
         <AccountSummary/>
-
       </div>
+      <TransactionHistory/>
+      <AddTransaction/>
      
       
     </div>

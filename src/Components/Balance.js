@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AccountSummary = ()=>{
+const Balance = ()=>{
     return(
-        <div>
-            <h4>Current Balance</h4>
+        <div className="balance">
+            <h3>Current Balance</h3>
             <h1>$0.00</h1>
         </div>
     )
 }
-export default AccountSummary
+export default Balance;

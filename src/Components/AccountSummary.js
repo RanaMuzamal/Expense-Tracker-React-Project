@@ -2,17 +2,21 @@ import React from 'react';
 
 const AccountSummary = ()=>{
     return(
-        <div>
-            <div>
-            <h4>Income</h4>
-            <h1>0.00</h1>
+        <div className="accountDetails">
+            <div  className="Inc">
+                <h4>Income</h4>
+                <p  className="income">
+                    0.00
+                </p>
             </div>
-            <div>
-            <h4>Expense</h4>
-            <h1>0.00</h1>
+            <div className="Exp"> 
+                <h4>Expense</h4>
+                <p  className="expense">
+                    0.00
+                </p>
             </div>
         </div>
         
-    )
+    );
 }
-export default AccountSummary
+export default AccountSummary;

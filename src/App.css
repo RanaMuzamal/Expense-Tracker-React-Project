@@ -1,7 +1,117 @@
-.header{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-}
+.App {
+    text-align: center;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  
+  .body{
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .balance{
+    line-height: 0em;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0em;
+  }
+  .accountDetails{
+    text-align: left;
+    display: flex;
+    border:1px solid white;
+    width: 300px;
+    margin: 5px;
+  }
+  .accountDetails > div{
+    margin-right: 25px;
+    margin-left: 30px;
+    margin-top: 10px;
+    padding: 0px;
+    text-align: center;
+
+  }
+  .Inc{
+    line-height: 0.5em;
+  }
+  .Exp{
+    line-height: 0.5em;
+  }
+  .transactionHistory{
+    text-align: center;
+    justify-content: center;
+  }
+  .history{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .history li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 5px 0;
+    width: 280px;
+
+  }
+  .history li.incomeHistory {
+    border-right: 5px solid #b6960a;
+    font-size: small;
+  }
+  .history li.incomeHistory:hover {
+    border-right: 5px solid #b6960a;
+    background-color: #b6960a;
+    color: #f7f7f7
+  }
+  .history li.expenseHistory {
+    border-right: 5px solid #2da3ad;
+    font-size: small;
+  }
+  
+  .history li.expenseHistory:hover {
+    border-right: 5px solid #2da3ad;
+    background-color: #2da3ad;
+    color: #f7f7f7
+  }
+  .delete-btn {
+    cursor: pointer;
+    background-color: #8a6a66;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .history li:hover .delete-btn {
+    opacity: 1;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
