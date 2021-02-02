@@ -15,7 +15,13 @@
     text-align: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    line-height: 00.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
+  .balanceDetails{
+    margin-top: -15px;
+  }
+ 
   .balance{
     line-height: 0em;
     text-align: center;
@@ -65,29 +71,29 @@
 
   }
   .history li.incomeHistory {
-    border-right: 5px solid #b6960a;
+    border-right: 5px solid  #aa9845;
     font-size: small;
   }
   .history li.incomeHistory:hover {
-    border-right: 5px solid #b6960a;
+    border-right: 5px solid #aa9845;
     background-color: #b6960a;
     color: #f7f7f7
   }
   .history li.expenseHistory {
-    border-right: 5px solid #2da3ad;
+    border-right: 5px solid #205257;
     font-size: small;
   }
   
   .history li.expenseHistory:hover {
-    border-right: 5px solid #2da3ad;
+    border-right: 5px solid #205257;
     background-color: #2da3ad;
     color: #f7f7f7
   }
   .delete-btn {
     cursor: pointer;
-    background-color: #8a6a66;
+    background-color: floralwhite;
     border: 0;
-    color: #fff;
+    color:teal;
     font-size: 20px;
     line-height: 20px;
     padding: 2px 5px;
@@ -101,7 +107,45 @@
   .history li:hover .delete-btn {
     opacity: 1;
   }
+  .Add_Tran{
+    margin-top: -15px;
+  }
+  .form-control{
+    margin-left: 0px;
+  }
+  label {
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+    float: left;
+    line-height: 0.5em;
+    font-size: 18px;
+  }
   
+  input[type='text'],
+  input[type='number'] {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 92%;
+    
+  }
+  .addtrans_btn{
+    cursor: pointer;
+    background-color:darkturquoise;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 12px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+  }
   .App-link {
     color: #61dafb;
   }

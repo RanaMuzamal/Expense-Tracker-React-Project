@@ -16,9 +16,10 @@ function App() {
       <div className="balanceDetails">
         <Balance/>
         <AccountSummary/>
+        <TransactionHistory/>
+        <AddTransaction/>
       </div>
-      <TransactionHistory/>
-      <AddTransaction/>
+      
      
       
     </div>
