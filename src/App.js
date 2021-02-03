@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+//import Global Provider
+import {GlobalProvider} from './context/GlobalState'
 
 
 //import components
@@ -11,18 +13,17 @@ import AddTransaction from './Components/AddTransaction'
 
 function App() {
   return (
-    <div className="body">
-      <Header/>
-      <div className="balanceDetails">
+    <GlobalProvider>
+      <div className="body">
+        <Header/>
+        <div className="balanceDetails">
         <Balance/>
         <AccountSummary/>
         <TransactionHistory/>
         <AddTransaction/>
+        </div>
       </div>
-      
-     
-      
-    </div>
+    </GlobalProvider>
   );
 }
 
