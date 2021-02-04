@@ -1,9 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 //import Global Provider
 import {GlobalProvider} from './context/GlobalState'
-
-
 //import components
 import Header from './Components/Header'
 import Balance from './Components/Balance'

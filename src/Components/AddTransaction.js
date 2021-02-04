@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 
+
 const AddTransaction=()=>{
     const [description,setDescription] = useState();
     const [transactionAmount,setTransactionAmount]=useState();
@@ -9,10 +10,9 @@ const AddTransaction=()=>{
             <form>
                 <div className="form-control">
                     <label htmlFor="description">Description</label><br/>
-                    <input 
-                        type="text"
-                         placeholder="Detail of Transaction"
-                          id="description"
+                    <input type="text"
+                           placeholder="Detail of Transaction"
+                           id="description"
                            width="300px" 
                            height="23px"
                            value={description}
