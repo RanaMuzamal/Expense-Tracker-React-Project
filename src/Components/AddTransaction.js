@@ -1,41 +1,37 @@
-import React , {useState} from 'react';
+import React , {useState} from 'react'
+import {useContext } from 'react'
+import {GlobalContext} from '../context/GlobalState'
 
-
-const AddTransaction=()=>{
-    const [description,setDescription] = useState();
-    const [transactionAmount,setTransactionAmount]=useState();
-    return(
+export const AddTransaction = () => {
+    const [text,setText]=useState(' ');
+    const [amount,setAmount]=useState(0);
+    const {AddTransaction}=useContext(GlobalContext);
+    const onSubmit = e => {
+        e.preventDefault();
+        const newTransaction={
+            id:Math.floor(Math.random()*100000000),
+            text,
+            amount:+amount
+        }
+        AddTransaction(newTransaction);
+    }
+    return (
         <div>
-            <h4 className="Add_Tran">Add Transaction</h4>
-            <form>
-                <div className="form-control">
-                    <label htmlFor="description">Description</label><br/>
-                    <input type="text"
-                           placeholder="Detail of Transaction"
-                           id="description"
-                           width="300px" 
-                           height="23px"
-                           value={description}
-                           onChange={(e)=>setDescription(e.target.value)}> 
-                    </input>
+            <h3>Add Transaction</h3>
+            <form onSubmit={onSubmit}>
+                <div className="form-Control">
+                    <label htmlFor="text">Text</label>
+                    <input type="text" placeholder="Enter text here " value={text} onChange={(e)=> setText(e.target.value)} />
                 </div>
                 <div className="form-control">
-                    <label htmlFor="transactionAmount">Transaction Amount</label><br/>
-                    <input 
-                        type="number" 
-                        placeholder="Income"
-                        id="transactionAmount" 
-                        width="300px" 
-                        height="23px"
-                        value={transactionAmount}
-                        onChange={(e)=>setTransactionAmount(e.target.value)}>
-                    </input>
+                    <label htmlFor="amount"
+                        >Amount <br />
+                        (negative - expense, positive - income)</label
+                    >
+                    <input type="number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="Enter amount here "/>
                 </div>
-                <button className="addtrans_btn" type="submit">Add Transaction</button>
-
-
+                <button className="btn">Add Transaction</button>
             </form>
         </div>
     )
 }
-export default AddTransaction
